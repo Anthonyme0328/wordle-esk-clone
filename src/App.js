@@ -9,7 +9,7 @@ import { boardDefault } from './Words'
 export const AppContext = createContext()
 
 function App() {
-  
+
   const [board, setBoard] = useState(boardDefault)
 
   return (
@@ -18,8 +18,10 @@ function App() {
         <h1>Word-lik-el</h1>
       </nav>
       <AppContext.Provider value={{board, setBoard}}>
-      <Board />
-      <Keyboard/>
+        <div className='game'>
+          <Board />
+          <Keyboard/>
+        </div>
       </AppContext.Provider>
     </div>
   );

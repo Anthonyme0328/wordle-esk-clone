@@ -1,4 +1,5 @@
 import React from 'react'
+import Key from './Key'
 
 const Keyboard = () => {
 
@@ -11,11 +12,32 @@ const Keyboard = () => {
   return (
     <div className='keyboard'>
 
-      <div className='line1'></div>
+      <div className='line1'>
 
-      <div className='line2'></div>
+        {keys1.map((key) => {
+        return <Key keyVal={key} />
+      })}
 
-      <div className='line3'></div>
+      </div>
+
+      <div className='line2'>
+
+      {keys2.map((key) => {
+        return <Key keyVal={key} />
+      })}
+
+      </div>
+
+      <div className='line3'>
+
+      <Key keyVal={'Enter'} bigKey />
+      {keys3.map((key) => {
+        return <Key keyVal={key} />
+      })}
+
+      <Key keyVal={"Delete"} bigKey />
+
+      </div>
 
     </div>
   )
