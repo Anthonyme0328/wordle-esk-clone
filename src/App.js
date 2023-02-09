@@ -1,9 +1,26 @@
+import { createContext, useState } from 'react';
+
 import './App.css';
+import Board from './components/Board';
+import Keyboard from './components/Keyboard'
+import { boardDefault } from './Words'
+
+
+export const AppContext = createContext()
 
 function App() {
+  
+  const [board, setBoard] = useState(boardDefault)
+
   return (
     <div className="App">
-      hello
+      <nav>
+        <h1>Word-lik-el</h1>
+      </nav>
+      <AppContext.Provider value={{board, setBoard}}>
+      <Board />
+      <Keyboard/>
+      </AppContext.Provider>
     </div>
   );
 }
