@@ -22,8 +22,8 @@ function App() {
   useEffect(() => {
     generatelistWordsSet().then((words) => {
       setlistWordsSet(words.setOfWords)
-      console.log('the word is: ', words.dailyWord)
       setCorrectWord(words.dailyWord.toUpperCase())
+      console.log('the word is: ', words.dailyWord)
     })
   }, [])
 
@@ -54,8 +54,6 @@ function App() {
 
     if (listWordsSet.has(currWord.toLowerCase())) {
       setTry({attempt: currTry.attempt + 1, letter: 0})
-    } else {
-      alert ('not a word')
     }
 
     if (currWord.toLowerCase() === correctWord.toLowerCase()) {
