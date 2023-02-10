@@ -2,16 +2,23 @@ import React, {useContext} from 'react'
 import { AppContext } from '../App'
 
 
-const Key = ({keyVal, bigKey}) => {
-  const { board,setBoard } = useContext(AppContext)
+const Key = ({keyVal, bigKey, disabled}) => {
+  const { onDelete, onEnter, onSelectLetter } = useContext(AppContext)
 
   const selectLetter = () => {
-    const newBoard = [...board]
-    newBoard[0][0] = keyVal
-    setBoard(newBoard)
+    if (keyVal === 'Enter') {
+      onEnter()
+       
+    } else if (keyVal === 'Delete') {
+      onDelete()
+    }  
+      else {
+       onSelectLetter(keyVal)
+    }
+
   }
   return (
-    <div className='key' id={bigKey && 'big'} onClick={selectLetter}>
+    <div className='key' id={bigKey ? 'big' : disabled && 'disabled'} onClick={selectLetter}>
       {keyVal}
     </div>
   )

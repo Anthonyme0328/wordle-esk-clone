@@ -5,6 +5,8 @@
 body {
   padding: 0%;
   margin: 0;
+  background-color: cornflowerblue;
+
 }
 
 nav {
@@ -12,6 +14,7 @@ nav {
   width: 100%;
   margin: 0;
   border-bottom: 1px solid grey;
+  background-color: rgb(79, 79, 209);
   display: grid;
   place-items: center;
 }
@@ -21,6 +24,7 @@ nav h1 {
   font-family: Helvetica, Arial, sans-serif;
   color: black;
   font-size: 45px;
+  text-shadow: 2px 4px rgb(89, 87, 87);
 }
 .game {
   width: 100vw;
@@ -32,9 +36,8 @@ nav h1 {
 }
 
 .board {
-  width: 450px;
-  height: 550px;
-  border: 1px solid black;
+  width: 30em;
+  height: 20em;
   display: flex;
   flex-direction: column;
 }
@@ -48,15 +51,16 @@ nav h1 {
 
 .letter {
   flex: 33%;
-  height: 100%;
-  border: 1px solid grey;
-  margin: 5px;
+  height: 2.5em;
+  border: 1px solid white;
+  margin: 5px 1px 0px 1px;
   display: grid;
   place-items: center;
-  font-size: 30px;
+  font-size: 1.25em;
   font-weight: bolder;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
+  border-radius: 10px;
 }
 
 #correct {
@@ -77,7 +81,7 @@ nav h1 {
   margin-top: 60px;
 }
 
-.line1 {
+.topRowKeys {
   flex: 33%;
   display: flex;
   flex-direction: row;
@@ -85,14 +89,14 @@ nav h1 {
   justify-content: center;
   margin: 5px;
 }
-.line2 {
+.middleRowKeys {
   flex: 33%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   margin: 5px;
 }
-.line3 {
+.bottomRowKeys {
   flex: 33%;
   display: flex;
   flex-direction: row;
@@ -108,15 +112,39 @@ nav h1 {
   display: grid;
   place-items: center;
   font-size: 20px;
-  background-color: grey;
-  color: black;
+  background-color: lightblue;
+  color: grey;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  box-shadow: 5px 10px darkgray;
+
 }
 
 #big {
   width: 100px;
 }
 #disabled {
-  background-color: #3a393c;
+  background-color: black;
+}
+
+.reloadButton {
+  border-style: none;
+  border-radius: 5px;
+  background-color:rgb(183, 183, 255);
+  color: black;
+  font-size: 15px;
+  width: 6em;
+  height: 3em;
+  margin: 1em 0em 0em 0em;
+  box-shadow: 2px 4px rgb(136, 136, 199) ;
+}
+
+.EndOfGame {
+  margin: 2em;
+  border: 2px solid blue;
+  border-radius: 8px;
+}
+
+.theWord {
+  margin: 15px;
 }
