@@ -1,4 +1,4 @@
-import bankOfWords from './bankOfWords.txt'
+import { wordBank } from "./bankOfWords";
 
 export const boardDefault = [
   ['','','','',''],
@@ -9,17 +9,16 @@ export const boardDefault = [
   ['','','','','']
 ]
 
+console.log(wordBank)
 export const generatelistWordsSet = async () => {
+
   let setOfWords;
   let dailyWord;
 
 
-  await fetch(bankOfWords).then((response) => response.text())
-  .then((result) => {
-    const wordBankList = result.split('\r\n')
-    dailyWord = wordBankList[Math.floor(Math.random() * wordBankList.length)]
-    setOfWords = new Set(wordBankList)
-  })
+    dailyWord = wordBank[Math.floor(Math.random() * wordBank.length)]
+    setOfWords = new Set(wordBank)
+  
 
   // return {listWordsSet, todaysWord}
   return {setOfWords, dailyWord }
