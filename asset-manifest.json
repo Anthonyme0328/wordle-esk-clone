@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/wordle-esk-clone/static/css/main.7215c4eb.css",
-    "main.js": "/wordle-esk-clone/static/js/main.23eaaf6c.js",
+    "main.js": "/wordle-esk-clone/static/js/main.977d67d9.js",
     "static/media/bankOfWords.txt": "/wordle-esk-clone/static/media/bankOfWords.d1e180c0e95e817784be.txt",
     "index.html": "/wordle-esk-clone/index.html",
     "main.7215c4eb.css.map": "/wordle-esk-clone/static/css/main.7215c4eb.css.map",
-    "main.23eaaf6c.js.map": "/wordle-esk-clone/static/js/main.23eaaf6c.js.map"
+    "main.977d67d9.js.map": "/wordle-esk-clone/static/js/main.977d67d9.js.map"
   },
   "entrypoints": [
     "static/css/main.7215c4eb.css",
-    "static/js/main.23eaaf6c.js"
+    "static/js/main.977d67d9.js"
   ]
 }
