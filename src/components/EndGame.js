@@ -20,7 +20,7 @@ const EndGame = () => {
       </h3>
 
       <h1 className='theWord'>
-        The Word Was: {correctWord.toUpperCase()}
+        The Word Was: {<span className='correctWord'>{correctWord.toUpperCase()}</span>}
       </h1>
       
       {gameOver.guessedWord && (<h3>You Guessed in {currTry.attempt} tries</h3>)}

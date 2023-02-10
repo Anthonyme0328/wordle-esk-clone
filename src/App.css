@@ -141,10 +141,15 @@ nav h1 {
 
 .EndOfGame {
   margin: 2em;
-  border: 2px solid blue;
+  border: 2px solid rgb(41, 129, 183);
   border-radius: 8px;
+  box-shadow: 4px 8px darkgrey;
 }
 
 .theWord {
   margin: 15px;
+}
+
+.correctWord {
+  color: rgb(235, 120, 120);
 }
