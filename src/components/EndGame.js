@@ -10,7 +10,7 @@ const EndGame = () => {
         {gameOver.guessedWord 
           ?
             <button className='reloadButton' onClick={() => window.location.reload(true)}>
-              Winner
+              Winner! Again?
             </button>  
           : 
             <button className='reloadButton' onClick={() => window.location.reload(true)}>
