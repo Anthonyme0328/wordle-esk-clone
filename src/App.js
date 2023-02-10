@@ -59,6 +59,8 @@ function App() {
     if (currWord.toLowerCase() === correctWord.toLowerCase()) {
       setGameOver({gameOver: true, guessedWord: true})
       return
+    } else {
+      alert ('Try using Real Words No Cheating!!')
     }
 
     if (currTry.attempt === 4) {
